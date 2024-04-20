@@ -1,0 +1,58 @@
+#+OPTIONS: ^:nil tags:nil num:nil
+
+* About
+
+Transient menu for [[https://github.com/xenodium/dwim-shell-command][dwim-shell-commands]].
+
+* Table of Contents                                       :TOC_2_gh:QUOTE:
+#+BEGIN_QUOTE
+- [[#about][About]]
+- [[#requirements][Requirements]]
+- [[#installation][Installation]]
+  - [[#with-use-package-and-straightel][With use-package and straight.el]]
+  - [[#manual-installation][Manual installation]]
+- [[#usage][Usage]]
+  - [[#transient][Transient]]
+#+END_QUOTE
+
+* Requirements
+
+| Name                 | Version |
+|----------------------+---------|
+| Emacs                |    29.1 |
+| ~dwim-shell-command~ |    0.61 |
+| ~transient~          |   0.6.0 |
+
+
+* Installation
+
+** With use-package and straight.el
+#+begin_src elisp :eval no
+(use-package dwim-shell-commands-menu
+  :straight (dwim-shell-commands-menu
+             :repo "KarimAziev/dwim-shell-commands-menu"
+             :type git
+             :host github))
+#+end_src
+
+** Manual installation
+
+Download the source code and put it wherever you like, e.g. into =~/.emacs.d/dwim-shell-commands-menu/=
+
+#+begin_src shell :eval no
+git clone https://github.com/KarimAziev/dwim-shell-commands-menu.git ~/.emacs.d/dwim-shell-commands-menu/
+#+end_src
+
+Add the downloaded directory to the load path:
+
+#+begin_src elisp :eval no
+(add-to-list 'load-path "~/.emacs.d/dwim-shell-commands-menu/")
+(require 'dwim-shell-commands-menu)
+#+end_src
+
+* Usage
+
+** Transient
+
+**** ~dwim-shell-commands-menu~
+Display a menu of shell commands grouped into columns.
